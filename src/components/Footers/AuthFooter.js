@@ -16,10 +16,10 @@
 
 */
 /*eslint-disable*/
-import React from "react";
+import React from 'react'
 
 // reactstrap components
-import { NavItem, NavLink, Nav, Container, Row, Col } from "reactstrap";
+import { NavItem, NavLink, Nav, Container, Row, Col } from 'reactstrap'
 
 class Login extends React.Component {
   render() {
@@ -30,45 +30,24 @@ class Login extends React.Component {
             <Row className="align-items-center justify-content-xl-between">
               <Col xl="6">
                 <div className="copyright text-center text-xl-left text-muted">
-                  © 2018{" "}
-                  <a
-                    className="font-weight-bold ml-1"
-                    href="https://www.creative-tim.com?ref=adr-auth-footer"
-                    target="_blank"
-                  >
-                    Creative Tim
-                  </a>
+                  Food Buddy
                 </div>
               </Col>
               <Col xl="6">
                 <Nav className="nav-footer justify-content-center justify-content-xl-end">
                   <NavItem>
-                    <NavLink
-                      href="https://www.creative-tim.com?ref=adr-auth-footer"
-                      target="_blank"
-                    >
-                      Creative Tim
-                    </NavLink>
+                    <NavLink href="#">Boolean Pundits</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="#">About Us</NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink href="#">Blog</NavLink>
                   </NavItem>
                   <NavItem>
                     <NavLink
-                      href="https://www.creative-tim.com/presentation?ref=adr-auth-footer"
-                      target="_blank"
-                    >
-                      About Us
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="http://blog.creative-tim.com?ref=adr-auth-footer"
-                      target="_blank"
-                    >
-                      Blog
-                    </NavLink>
-                  </NavItem>
-                  <NavItem>
-                    <NavLink
-                      href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md?ref=adr-auth-footer"
+                      href="https://github.com/BooleanPandits/hackout-food-buddy/blob/master/LICENSE"
+                      rel="noopener noreferrer"
                       target="_blank"
                     >
                       MIT License
@@ -80,8 +59,8 @@ class Login extends React.Component {
           </Container>
         </footer>
       </>
-    );
+    )
   }
 }
 
-export default Login;
+export default Login

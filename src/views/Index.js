@@ -15,13 +15,13 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
-import React from "react";
+import React from 'react'
 // node.js library that concatenates classes (strings)
-import classnames from "classnames";
+import classnames from 'classnames'
 // javascipt plugin for creating charts
-import Chart from "chart.js";
+import Chart from 'chart.js'
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line, Bar } from 'react-chartjs-2'
 // reactstrap components
 import {
   Button,
@@ -35,38 +35,38 @@ import {
   Table,
   Container,
   Row,
-  Col
-} from "reactstrap";
+  Col,
+} from 'reactstrap'
 
 // core components
 import {
   chartOptions,
   parseOptions,
   chartExample1,
-  chartExample2
-} from "variables/charts.js";
+  chartExample2,
+} from 'variables/charts.js'
 
-import Header from "components/Headers/Header.js";
+import Header from 'components/Headers/Header.js'
 
 class Index extends React.Component {
-  constructor(props){
-    super(props);
+  constructor(props) {
+    super(props)
     this.state = {
       activeNav: 1,
-      chartExample1Data: "data1"
-    };
+      chartExample1Data: 'data1',
+    }
     if (window.Chart) {
-      parseOptions(Chart, chartOptions());
+      parseOptions(Chart, chartOptions())
     }
   }
   toggleNavs = (e, index) => {
-    e.preventDefault();
+    e.preventDefault()
     this.setState({
       activeNav: index,
       chartExample1Data:
-        this.state.chartExample1Data === "data1" ? "data2" : "data1"
-    });
-  };
+        this.state.chartExample1Data === 'data1' ? 'data2' : 'data1',
+    })
+  }
   render() {
     return (
       <>
@@ -88,11 +88,11 @@ class Index extends React.Component {
                       <Nav className="justify-content-end" pills>
                         <NavItem>
                           <NavLink
-                            className={classnames("py-2 px-3", {
-                              active: this.state.activeNav === 1
+                            className={classnames('py-2 px-3', {
+                              active: this.state.activeNav === 1,
                             })}
                             href="#pablo"
-                            onClick={e => this.toggleNavs(e, 1)}
+                            onClick={(e) => this.toggleNavs(e, 1)}
                           >
                             <span className="d-none d-md-block">Month</span>
                             <span className="d-md-none">M</span>
@@ -100,12 +100,12 @@ class Index extends React.Component {
                         </NavItem>
                         <NavItem>
                           <NavLink
-                            className={classnames("py-2 px-3", {
-                              active: this.state.activeNav === 2
+                            className={classnames('py-2 px-3', {
+                              active: this.state.activeNav === 2,
                             })}
                             data-toggle="tab"
                             href="#pablo"
-                            onClick={e => this.toggleNavs(e, 2)}
+                            onClick={(e) => this.toggleNavs(e, 2)}
                           >
                             <span className="d-none d-md-block">Week</span>
                             <span className="d-md-none">W</span>
@@ -121,7 +121,7 @@ class Index extends React.Component {
                     <Line
                       data={chartExample1[this.state.chartExample1Data]}
                       options={chartExample1.options}
-                      getDatasetAtEvent={e => console.log(e)}
+                      getDatasetAtEvent={(e) => console.log(e)}
                     />
                   </div>
                 </CardBody>
@@ -152,18 +152,18 @@ class Index extends React.Component {
             </Col>
           </Row>
           <Row className="mt-5">
-            <Col className="mb-5 mb-xl-0" xl="8">
+            <Col className="mb-5 mb-xl-0" xl="6">
               <Card className="shadow">
                 <CardHeader className="border-0">
                   <Row className="align-items-center">
                     <div className="col">
-                      <h3 className="mb-0">Page visits</h3>
+                      <h3 className="mb-0">Most bought food item</h3>
                     </div>
                     <div className="col text-right">
                       <Button
                         color="primary"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         See all
@@ -174,63 +174,42 @@ class Index extends React.Component {
                 <Table className="align-items-center table-flush" responsive>
                   <thead className="thead-light">
                     <tr>
-                      <th scope="col">Page name</th>
-                      <th scope="col">Visitors</th>
-                      <th scope="col">Unique users</th>
-                      <th scope="col">Bounce rate</th>
+                      <th scope="col">Item name</th>
+                      <th scope="col">Calories</th>
+                      <th scope="col">Purchases</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <th scope="row">/argon/</th>
-                      <td>4,569</td>
-                      <td>340</td>
-                      <td>
-                        <i className="fas fa-arrow-up text-success mr-3" />{" "}
-                        46,53%
-                      </td>
+                      <th scope="row">Burgers</th>
+                      <td>450</td>
+                      <td>34</td>
                     </tr>
                     <tr>
-                      <th scope="row">/argon/index.html</th>
-                      <td>3,985</td>
-                      <td>319</td>
-                      <td>
-                        <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                        46,53%
-                      </td>
+                      <th scope="row">Pizza</th>
+                      <td>900</td>
+                      <td>28</td>
                     </tr>
                     <tr>
-                      <th scope="row">/argon/charts.html</th>
-                      <td>3,513</td>
-                      <td>294</td>
-                      <td>
-                        <i className="fas fa-arrow-down text-warning mr-3" />{" "}
-                        36,49%
-                      </td>
+                      <th scope="row">Fries</th>
+                      <td>400</td>
+                      <td>25</td>
                     </tr>
                     <tr>
-                      <th scope="row">/argon/tables.html</th>
-                      <td>2,050</td>
-                      <td>147</td>
-                      <td>
-                        <i className="fas fa-arrow-up text-success mr-3" />{" "}
-                        50,87%
-                      </td>
+                      <th scope="row">Pasta</th>
+                      <td>500</td>
+                      <td>14</td>
                     </tr>
                     <tr>
-                      <th scope="row">/argon/profile.html</th>
-                      <td>1,795</td>
-                      <td>190</td>
-                      <td>
-                        <i className="fas fa-arrow-down text-danger mr-3" />{" "}
-                        46,53%
-                      </td>
+                      <th scope="row">Samosa</th>
+                      <td>480</td>
+                      <td>12</td>
                     </tr>
                   </tbody>
                 </Table>
               </Card>
             </Col>
-            <Col xl="4">
+            <Col xl="6">
               <Card className="shadow">
                 <CardHeader className="border-0">
                   <Row className="align-items-center">
@@ -241,7 +220,7 @@ class Index extends React.Component {
                       <Button
                         color="primary"
                         href="#pablo"
-                        onClick={e => e.preventDefault()}
+                        onClick={(e) => e.preventDefault()}
                         size="sm"
                       >
                         See all
@@ -341,8 +320,8 @@ class Index extends React.Component {
           </Row>
         </Container>
       </>
-    );
+    )
   }
 }
 
-export default Index;
+export default Index
