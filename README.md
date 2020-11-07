@@ -9,3 +9,5 @@ yarn
 
 yarn start
 ```
+
+## Note: Canteen Portal is [here](https://github.com/TechTruckers/canteenPortal)
