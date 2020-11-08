@@ -38,10 +38,10 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Traffic
+                            Credits  
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            350,897
+                            1500
                           </span>
                         </div>
                         <Col className="col-auto">
@@ -68,10 +68,10 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            New users
+                            Credits (last month)
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            2,356
+                            1450
                           </span>
                         </div>
                         <Col className="col-auto">
@@ -80,12 +80,6 @@ class Header extends React.Component {
                           </div>
                         </Col>
                       </Row>
-                      <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-danger mr-2">
-                          <i className="fas fa-arrow-down" /> 3.48%
-                        </span>{" "}
-                        <span className="text-nowrap">Since last week</span>
-                      </p>
                     </CardBody>
                   </Card>
                 </Col>
@@ -98,9 +92,9 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Sales
+                            Calories (last month)
                           </CardTitle>
-                          <span className="h2 font-weight-bold mb-0">924</span>
+                          <span className="h2 font-weight-bold mb-0">92,400</span>
                         </div>
                         <Col className="col-auto">
                           <div className="icon icon-shape bg-yellow text-white rounded-circle shadow">
@@ -108,12 +102,6 @@ class Header extends React.Component {
                           </div>
                         </Col>
                       </Row>
-                      <p className="mt-3 mb-0 text-muted text-sm">
-                        <span className="text-warning mr-2">
-                          <i className="fas fa-arrow-down" /> 1.10%
-                        </span>{" "}
-                        <span className="text-nowrap">Since yesterday</span>
-                      </p>
                     </CardBody>
                   </Card>
                 </Col>
@@ -126,10 +114,10 @@ class Header extends React.Component {
                             tag="h5"
                             className="text-uppercase text-muted mb-0"
                           >
-                            Performance
+                            Calories
                           </CardTitle>
                           <span className="h2 font-weight-bold mb-0">
-                            49,65%
+                            99,990
                           </span>
                         </div>
                         <Col className="col-auto">
