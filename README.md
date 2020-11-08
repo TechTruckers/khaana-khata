@@ -1,9 +1,11 @@
 # Welcome to this non existent documentation
 
-```sh
-git clone https://github.com/TechTruckers/money-mitra.git
+## [Demo](https://khanakhata.roneel.tech)
 
-cd money-mitra
+```sh
+git clone https://github.com/TechTruckers/khaana-khata.git
+
+cd khaana-khata
 
 yarn
 
