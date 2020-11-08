@@ -98,11 +98,11 @@ class AdminNavbar extends React.Component {
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem
-                    href="#pablo"
+                    href="/auth/login"
                     onClick={(e) => e.preventDefault()}
                   >
                     <i className="ni ni-user-run" />
-                    <Link to="/auth/login">Logout</Link>
+                    <span>Logout</span>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

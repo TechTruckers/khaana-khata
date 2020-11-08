@@ -31,7 +31,7 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Progress,
+  // Progress,
   Table,
   Container,
   Row,
@@ -70,7 +70,7 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <Header />
+        <Header {...this.props} />
         {/* Page content */}
         <Container className="mt--7" fluid>
           <Row>
@@ -150,7 +150,7 @@ class Index extends React.Component {
                 </CardBody>
               </Card>
             </Col>
-            
+
             {/*<Col className="mb-5 mb-xl-0" xl="8">
               <Card className="bg-gradient-default shadow">
                 <CardHeader className="bg-transparent">
@@ -227,7 +227,7 @@ class Index extends React.Component {
                 </CardBody>
               </Card>
           </Col>*/}
-          </Row> 
+          </Row>
           <Row className="mt-5">
             <Col className="mb-5 mb-xl-0" xl="6">
               <Card className="shadow">
@@ -314,36 +314,22 @@ class Index extends React.Component {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <th scope="row">Burgers</th>
-                      <td>450</td>
-                      <td>34</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Pizza</th>
-                      <td>900</td>
-                      <td>28</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Fries</th>
-                      <td>400</td>
-                      <td>25</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Pasta</th>
-                      <td>500</td>
-                      <td>14</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">Samosa</th>
-                      <td>480</td>
-                      <td>12</td>
-                    </tr>
+                    {this.props.doc &&
+                      this.props.doc.history &&
+                      this.props.doc.history.map(
+                        ({ price, calories, item }) => (
+                          <tr key={'table2-' + item}>
+                            <th scope="row">{item}</th>
+                            <td>{calories}</td>
+                            <td>{price}</td>
+                          </tr>
+                        )
+                      )}
                   </tbody>
                 </Table>
               </Card>
             </Col>
-           </Row>
+          </Row>
         </Container>
       </>
     )

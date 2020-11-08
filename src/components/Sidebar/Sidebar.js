@@ -169,9 +169,12 @@ class Sidebar extends React.Component {
                   <span>Support</span>
                 </DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem href="#pablo" onClick={(e) => e.preventDefault()}>
+                <DropdownItem
+                  href="/auth/login"
+                  onClick={(e) => e.preventDefault()}
+                >
                   <i className="ni ni-user-run" />
-                  <Link to="/auth/login">Logout</Link>
+                  <span>Logout</span>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
